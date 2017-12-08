@@ -1,20 +1,38 @@
 {
-  "name": "NodeES6",
+  "name": "node-es6",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev:build": "webpack --watch",
+    "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
+    "dev": "npm-run-all --parallel dev:*"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yuttasakcom/NodeES6.git"
   },
-  "keywords": [],
+  "keywords": [
+    "node-es6",
+    "nodees6"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/yuttasakcom/NodeES6/issues"
   },
-  "homepage": "https://github.com/yuttasakcom/NodeES6#readme"
+  "homepage": "https://github.com/yuttasakcom/NodeES6#readme",
+  "dependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "express": "^4.16.2",
+    "webpack": "^3.10.0",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.2"
+  }
 }
