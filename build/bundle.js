@@ -74,19 +74,30 @@ var _express = __webpack_require__(1);
 
 var _express2 = _interopRequireDefault(_express);
 
+var _routes = __webpack_require__(2);
+
+var _routes2 = _interopRequireDefault(_routes);
+
+var _path = __webpack_require__(3);
+
+var _path2 = _interopRequireDefault(_path);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+// Create Express server.
 var app = (0, _express2.default)();
 
+// Express configuration.
+// Module dependencies.
 app.set('port', process.env.PORT || 3000);
+app.use(_express2.default.static('src/views'));
 
-app.get('/', function (req, res) {
-  res.end('Hello!');
-});
+// Routes.
+(0, _routes2.default)(app);
 
+// Start Express server.
 app.listen(app.get('port'), function (err) {
   if (err) throw err;
-
   console.log('Server running at localhost:' + app.get('port'));
 });
 
@@ -95,6 +106,30 @@ app.listen(app.get('port'), function (err) {
 /***/ (function(module, exports) {
 
 module.exports = require("express");
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+var Routes = function Routes(app) {
+  app.use('/', function (req, res) {
+    res.sendFile('index.html');
+  });
+};
+
+exports.default = Routes;
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+module.exports = require("path");
 
 /***/ })
 /******/ ]);
