@@ -61,5 +61,10 @@ describe('GET /', () => {
 ```
 
 ## Docker
+```
+## for connect nginx reverse proxy
 $ docker network create proxy
+
+## start container
 $ docker-compose up -d --build
+```
