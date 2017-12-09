@@ -78,7 +78,7 @@ $ docker-compose up -d --build
 Dockerfile
 ----------------------------------------------
 
-FROM node:9.2.1-alpine
+FROM node:9.2.1
 
 RUN mkdir -p /install
 ADD package.json /install
@@ -87,11 +87,11 @@ RUN npm install --only=production
 ENV NODE_PATH=/install/node_modules
 
 WORKDIR /worker
-COPY ./build/bundle.js /worker/index.js
+COPY . .
 
 EXPOSE 3000
 
-CMD node /worker/index.js
+CMD ["npm", "start"]
 ```
 
 ```
