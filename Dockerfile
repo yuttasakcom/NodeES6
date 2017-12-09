@@ -9,4 +9,6 @@ ENV NODE_PATH=/install/node_modules
 WORKDIR /worker
 COPY ./build/bundle.js /worker/index.js
 
+EXPOSE 3000
+
 CMD node /worker/index.js
