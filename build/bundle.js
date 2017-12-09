@@ -117,6 +117,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var router = function router(app) {
+  app.use('/headers', function (req, res) {
+    res.json(req.headers);
+  });
+
   app.use('/', function (req, res) {
     res.end('Welcome to NODE ES6');
   });

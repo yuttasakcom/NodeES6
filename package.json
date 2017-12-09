@@ -7,7 +7,9 @@
     "dev:build": "webpack --watch",
     "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
     "dev": "npm-run-all --parallel dev:*",
-    "test": "jest"
+    "build": "webpack",
+    "test": "jest",
+    "start": "npm run build && node build/bundle.js"
   },
   "repository": {
     "type": "git",

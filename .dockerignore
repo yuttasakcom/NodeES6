@@ -1,1 +1,8 @@
+build
+test
+.babelrc
+.travis.yml
+docker-compose.yml
+Dockerfile
 package-lock.json
+README.md
