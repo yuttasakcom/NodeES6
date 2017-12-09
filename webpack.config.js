@@ -4,14 +4,14 @@ const webpackNodeExternals = require('webpack-node-externals')
 const resolve = dir => path.resolve(__dirname, dir)
 
 module.exports = {
-  entry: resolve('src/index.js'),
+  entry: resolve('server/server.js'),
   output: {
     path: resolve('build'),
     filename: 'bundle.js'
   },
   resolve: {
     alias: {
-      '@': resolve('src')
+      '@': resolve('server')
     }
   },
   target: 'node',

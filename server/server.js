@@ -16,3 +16,5 @@ app.listen(app.get('port'), err => {
   if (err) throw err
   console.log(`Server running at localhost:${app.get('port')}`)
 })
+
+module.exports = app

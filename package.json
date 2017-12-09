@@ -1,12 +1,13 @@
 {
   "name": "node-es6",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "NODE ES6",
+  "main": "server/server.js",
   "scripts": {
     "dev:build": "webpack --watch",
     "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
-    "dev": "npm-run-all --parallel dev:*"
+    "dev": "npm-run-all --parallel dev:*",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -16,23 +17,26 @@
     "node-es6",
     "nodees6"
   ],
-  "author": "",
-  "license": "ISC",
+  "author": "Yuttasak Pannawat<yuttasakcom@gmail.com>",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/yuttasakcom/NodeES6/issues"
   },
   "homepage": "https://github.com/yuttasakcom/NodeES6#readme",
   "dependencies": {
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
-    "express": "^4.16.2",
+    "jest": "^21.2.1",
+    "nodemon": "^1.12.5",
+    "npm-run-all": "^4.1.2",
+    "supertest": "^3.0.0",
     "webpack": "^3.10.0",
     "webpack-node-externals": "^1.6.0"
-  },
-  "devDependencies": {
-    "npm-run-all": "^4.1.2"
   }
 }

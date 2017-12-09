@@ -78,17 +78,13 @@ var _routes = __webpack_require__(2);
 
 var _routes2 = _interopRequireDefault(_routes);
 
-var _path = __webpack_require__(3);
-
-var _path2 = _interopRequireDefault(_path);
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 // Create Express server.
+// Module dependencies.
 var app = (0, _express2.default)();
 
 // Express configuration.
-// Module dependencies.
 app.set('port', process.env.PORT || 3000);
 
 // Routes.
@@ -99,6 +95,8 @@ app.listen(app.get('port'), function (err) {
   if (err) throw err;
   console.log('Server running at localhost:' + app.get('port'));
 });
+
+module.exports = app;
 
 /***/ }),
 /* 1 */
@@ -116,19 +114,13 @@ module.exports = require("express");
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-var Routes = function Routes(app) {
+var router = function router(app) {
   app.use('/', function (req, res) {
     res.end('Welcome to NODE ES6');
   });
 };
 
-exports.default = Routes;
-
-/***/ }),
-/* 3 */
-/***/ (function(module, exports) {
-
-module.exports = require("path");
+exports.default = router;
 
 /***/ })
 /******/ ]);
