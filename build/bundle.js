@@ -90,7 +90,6 @@ var app = (0, _express2.default)();
 // Express configuration.
 // Module dependencies.
 app.set('port', process.env.PORT || 3000);
-app.use(_express2.default.static('src/views'));
 
 // Routes.
 (0, _routes2.default)(app);
@@ -119,7 +118,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 var Routes = function Routes(app) {
   app.use('/', function (req, res) {
-    res.sendFile('index.html');
+    res.end('Welcome to NODE ES6');
   });
 };
 

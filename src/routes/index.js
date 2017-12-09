@@ -1,6 +1,6 @@
 const Routes = app => {
   app.use('/', (req, res) => {
-    res.sendFile('index.html')
+    res.end('Welcome to NODE ES6')
   })
 }
 
