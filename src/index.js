@@ -1,7 +1,6 @@
 // Module dependencies.
 import express from 'express'
 import routes from './routes'
-import path from 'path'
 
 // Create Express server.
 const app = express()
