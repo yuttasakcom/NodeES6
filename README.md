@@ -68,8 +68,10 @@ $ docker network create proxy
 ## start container
 $ docker-compose up -d --build
 ```
-Dockerfile
+
 ```
+## Dockerfile
+
 FROM node:9.2.1-alpine
 
 RUN mkdir -p /install
@@ -85,8 +87,10 @@ EXPOSE 3000
 
 CMD node /worker/index.js
 ```
-docker-compose.yml
+
 ```
+#docker-compose.yml
+
 version: '3'
 
 services:
