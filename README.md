@@ -109,6 +109,8 @@ services:
     container_name: nodees6
     environment:
       - HOST=nodees6
+    # ports:
+    #   - "3000:3000"
     networks:
       - proxy
     restart: always
@@ -116,4 +118,5 @@ services:
 networks:
   proxy:
     external: true
+
 ```
