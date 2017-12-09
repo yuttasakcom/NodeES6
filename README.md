@@ -27,6 +27,7 @@ app.listen(app.get('port'), err => {
   console.log(`Server running at localhost:${app.get('port')}`)
 })
 
+// Export for test
 module.exports = app
 
 ```
