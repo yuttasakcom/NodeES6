@@ -2,18 +2,26 @@ version: '3'
 
 services:
 
+  proxy:
+    build: ./nginx
+    image: yuttasakcom/proxy:1.0
+    container_name: proxy
+    networks:
+      - proxy
+    ports:
+      - "80:80"
+    restart: always
+
   nodees6:
     build: .
     image: yuttasakcom/nodees6:1.0.0
     container_name: nodees6
     environment:
       - HOST=nodees6
-    # ports:
-    #   - "3000:3000"
     networks:
       - proxy
     restart: always
 
 networks:
   proxy:
-    external: true
+    driver: bridge

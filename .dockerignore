@@ -1,4 +1,5 @@
 build
+nginx
 test
 .babelrc
 .travis.yml
