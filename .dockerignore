@@ -1,4 +1,5 @@
 build
+coverage
 nginx
 test
 .babelrc
