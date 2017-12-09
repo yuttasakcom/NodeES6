@@ -85,17 +85,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var app = (0, _express2.default)();
 
 // Express configuration.
+app.set('host', process.env.HOST || 'localhost');
 app.set('port', process.env.PORT || 3000);
 
 // Routes.
 (0, _routes2.default)(app);
 
 // Start Express server.
-app.listen(app.get('port'), function (err) {
+app.listen(app.get('port'), app.get('host'), function (err) {
   if (err) throw err;
-  console.log('Server running at localhost:' + app.get('port'));
+  console.log('Server running at ' + app.get('host') + ':' + app.get('port'));
 });
 
+// Export for test
 module.exports = app;
 
 /***/ }),
