@@ -10,7 +10,7 @@
     "build": "webpack",
     "test": "jest",
     "cover": "jest --coverage",
-    "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls",
+    "coveralls": "npm run cover && cat ./coverage/lcov.info | coveralls",
     "start": "npm run build && node build/bundle.js"
   },
   "babel": {
