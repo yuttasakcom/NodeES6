@@ -1,6 +1,11 @@
 // Module dependencies.
 import express from 'express'
+import dotenv from 'dotenv'
 import routes from './routes'
+
+// Init environment
+// use .env edit to dotenv.config()
+dotenv.config({ path: '.env.example' })
 
 // Create Express server.
 const app = express()

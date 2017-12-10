@@ -78,11 +78,19 @@ var _express = __webpack_require__(1);
 
 var _express2 = _interopRequireDefault(_express);
 
-var _routes = __webpack_require__(2);
+var _dotenv = __webpack_require__(2);
+
+var _dotenv2 = _interopRequireDefault(_dotenv);
+
+var _routes = __webpack_require__(3);
 
 var _routes2 = _interopRequireDefault(_routes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Init environment
+// use .env edit to dotenv.config()
+_dotenv2.default.config({ path: '.env.example' });
 
 // Create Express server.
 // Module dependencies.
@@ -111,6 +119,12 @@ module.exports = require("express");
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports) {
+
+module.exports = require("dotenv");
+
+/***/ }),
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
