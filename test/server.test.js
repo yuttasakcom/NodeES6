@@ -1,9 +1,12 @@
-import supertest from 'supertest'
+import request from 'supertest'
 
-const request = supertest('http://localhost:3000')
+import app from '../server/app'
 
 describe('GET /', () => {
-  it('should return Welcome to NODE ES6 response', () => {
-    request.get('/').expect('Welcome to NODE ES6')
+  it('should return Welcome to NODE ES6 response', done => {
+    request(app)
+      .get('/')
+      .expect('Welcome to NODE ES6')
+      .end(done)
   })
 })

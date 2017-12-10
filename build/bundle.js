@@ -70,11 +70,34 @@
 "use strict";
 
 
-var _express = __webpack_require__(1);
+var _app = __webpack_require__(1);
+
+var _app2 = _interopRequireDefault(_app);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// Start Express server.
+_app2.default.listen(_app2.default.get('port'), _app2.default.get('host'), function (err) {
+  if (err) throw err;
+  console.log('Server running at ' + _app2.default.get('host') + ':' + _app2.default.get('port'));
+});
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _express = __webpack_require__(2);
 
 var _express2 = _interopRequireDefault(_express);
 
-var _routes = __webpack_require__(2);
+var _routes = __webpack_require__(3);
 
 var _routes2 = _interopRequireDefault(_routes);
 
@@ -91,23 +114,17 @@ app.set('port', process.env.PORT || 3000);
 // Routes.
 (0, _routes2.default)(app);
 
-// Start Express server.
-app.listen(app.get('port'), app.get('host'), function (err) {
-  if (err) throw err;
-  console.log('Server running at ' + app.get('host') + ':' + app.get('port'));
-});
-
 // Export for test
-module.exports = app;
+exports.default = app;
 
 /***/ }),
-/* 1 */
+/* 2 */
 /***/ (function(module, exports) {
 
 module.exports = require("express");
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
