@@ -4,7 +4,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/yuttasakcom/NodeES6.svg)](https://github.com/yuttasakcom/NodeES6/issues)
 [![GitHub forks](https://img.shields.io/github/forks/yuttasakcom/NodeES6.svg)](https://github.com/yuttasakcom/NodeES6/network)
 [![GitHub stars](https://img.shields.io/github/stars/yuttasakcom/NodeES6.svg)](https://github.com/yuttasakcom/NodeES6/stargazers)
-[![GitHub license](https://img.shields.io/github/license/yuttasakcom/NodeES6.svg)](https://github.com/yuttasakcom/NodeES6)
+[![GitHub license](https://img.shields.io/github/license/yuttasakcom/NodeES6.svg)](https://github.com/yuttasakcom/NodeES6/blob/master/LICENSE)
 
 ## Table of Contents
 - [App](#app)
