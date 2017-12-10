@@ -8,8 +8,8 @@
     "dev:server": "nodemon --watch build --exec \"node build/bundle.js\"",
     "dev": "npm-run-all --parallel dev:*",
     "build": "webpack",
-    "test": "jest",
-    "cover": "jest --coverage",
+    "test": "jest --forceExit",
+    "cover": "jest --coverage --forceExit",
     "coveralls": "npm run cover && cat ./coverage/lcov.info | coveralls",
     "start": "npm run build && node build/bundle.js"
   },

@@ -8,7 +8,6 @@
 
 ## Table of Contents
 - [App](#app)
-- [Server](#server)
 - [Routes](#routes)
 - [Test](#test)
 - [Docker](#dokcer)
@@ -30,20 +29,13 @@ app.set('port', process.env.PORT || 3000)
 // Routes.
 routes(app)
 
-// Export app
-export default app
-
-```
-
-## Server
-```javascript
-import app from './app'
-
 // Start Express server.
-app.listen(app.get('port'), app.get('host'), err => {
-  if (err) throw err
+app.listen(app.get('port'), app.get('host'), () => {
   console.log(`Server running at ${app.get('host')}:${app.get('port')}`)
 })
+
+// Export app
+export default app
 
 ```
 
