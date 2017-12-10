@@ -43,20 +43,20 @@
   },
   "homepage": "https://github.com/yuttasakcom/NodeES6#readme",
   "dependencies": {
-    "express": "^4.16.2"
-  },
-  "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
+    "express": "^4.16.2",
+    "webpack": "^3.10.0",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "devDependencies": {
     "coveralls": "^3.0.0",
     "jest": "^21.2.1",
     "nodemon": "^1.12.5",
     "npm-run-all": "^4.1.2",
-    "supertest": "^3.0.0",
-    "webpack": "^3.10.0",
-    "webpack-node-externals": "^1.6.0"
+    "supertest": "^3.0.0"
   }
 }
