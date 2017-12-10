@@ -1,4 +1,4 @@
-FROM node:9.2.1
+FROM node:9.2.1-alpine
 
 RUN mkdir -p /install
 ADD package.json /install
