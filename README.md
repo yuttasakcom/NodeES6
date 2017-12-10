@@ -3,12 +3,13 @@
 [![Coverage Status](https://coveralls.io/repos/github/yuttasakcom/NodeES6/badge.svg?branch=master)](https://coveralls.io/github/yuttasakcom/NodeES6?branch=master)
 
 ## Table of Contents
+- [App](#app)
 - [Server](#server)
 - [Routes](#routes)
 - [Test](#test)
 - [Docker](#dokcer)
 
-## Server
+## App
 ```javascript
 // Module dependencies.
 import express from 'express'
@@ -24,14 +25,20 @@ app.set('port', process.env.PORT || 3000)
 // Routes.
 routes(app)
 
+// Export app
+export default app
+
+```
+
+## Server
+```javascript
+import app from './app'
+
 // Start Express server.
 app.listen(app.get('port'), app.get('host'), err => {
   if (err) throw err
   console.log(`Server running at ${app.get('host')}:${app.get('port')}`)
 })
-
-// Export for test
-module.exports = app
 
 ```
 
@@ -49,13 +56,16 @@ export default router
 
 ## Test
 ```javascript
-import supertest from 'supertest'
+import request from 'supertest'
 
-const request = supertest('http://localhost:3000')
+import app from '../server/app'
 
 describe('GET /', () => {
-  it('should return Welcome to NODE ES6 response', () => {
-    request.get('/').expect('Welcome to NODE ES6')
+  it('should return Welcome to NODE ES6 response', done => {
+    request(app)
+      .get('/')
+      .expect('Welcome to NODE ES6')
+      .end(done)
   })
 })
 
@@ -104,20 +114,28 @@ version: '3'
 
 services:
 
+  proxy:
+    build: ./nginx
+    image: yuttasakcom/proxy:1.0
+    container_name: proxy
+    networks:
+      - proxy
+    ports:
+      - "80:80"
+    restart: always
+
   nodees6:
     build: .
     image: yuttasakcom/nodees6:1.0.0
     container_name: nodees6
     environment:
       - HOST=nodees6
-    # ports:
-    #   - "3000:3000"
     networks:
       - proxy
     restart: always
 
 networks:
   proxy:
-    external: true
+    driver: bridge
 
 ```
