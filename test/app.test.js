@@ -1,6 +1,6 @@
 import request from 'supertest'
 
-import app from '../server/app'
+import app from '../src/app'
 
 describe('GET /', () => {
   it('should return Welcome to NODE ES6 response', done => {
