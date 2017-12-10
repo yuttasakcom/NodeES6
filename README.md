@@ -1,6 +1,6 @@
 ## NODE ES6
 [![Build Status](https://travis-ci.org/yuttasakcom/NodeES6.svg?branch=master)](https://travis-ci.org/yuttasakcom/NodeES6)
-[![Coverage Status](https://coveralls.io/repos/github/yuttasakcom/NodeES6/badge.svg?branch=master)](https://coveralls.io/github/yuttasakcom/NodeES6?branch=master)
+[![Coveralls github branch](https://img.shields.io/coveralls/github/yuttasakcom/NodeES6/master.svg)](https://coveralls.io/github/yuttasakcom/NodeES6?branch=master)
 [![GitHub issues](https://img.shields.io/github/issues/yuttasakcom/NodeES6.svg)](https://github.com/yuttasakcom/NodeES6/issues)
 [![GitHub forks](https://img.shields.io/github/forks/yuttasakcom/NodeES6.svg)](https://github.com/yuttasakcom/NodeES6/network)
 [![GitHub stars](https://img.shields.io/github/stars/yuttasakcom/NodeES6.svg)](https://github.com/yuttasakcom/NodeES6/stargazers)
