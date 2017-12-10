@@ -1,6 +1,6 @@
 ## NODE ES6
 [![Build Status](https://travis-ci.org/yuttasakcom/NodeES6.svg?branch=master)](https://travis-ci.org/yuttasakcom/NodeES6)
-[![Coverage Status](https://coveralls.io/repos/github/yuttasakcom/NodeES6/badge.svg?branch=master)](https://coveralls.io/github/yuttasakcom/NodeES6?branch=master)
+<a href='https://coveralls.io/github/yuttasakcom/NodeES6?branch=master'><img src='https://coveralls.io/repos/github/yuttasakcom/NodeES6/badge.svg?branch=master' alt='Coverage Status' /></a>
 
 ## Table of Contents
 - [Server](#server)
