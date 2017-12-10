@@ -20,6 +20,7 @@ routes(app)
 // Start Express server.
 app.listen(app.get('port'), app.get('host'), () => {
   console.log(`Server running at ${app.get('host')}:${app.get('port')}`)
+  console.log('Press CTRL-C to stop')
 })
 
 // Export app

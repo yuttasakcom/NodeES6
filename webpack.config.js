@@ -1,3 +1,4 @@
+const webpack = require('webpack')
 const path = require('path')
 const webpackNodeExternals = require('webpack-node-externals')
 
@@ -32,5 +33,6 @@ module.exports = {
       }
     ]
   },
+  plugins: [new webpack.optimize.UglifyJsPlugin()],
   externals: webpackNodeExternals()
 }
