@@ -1,6 +1,6 @@
 const router = app => {
   app.use('/', (req, res) => {
-    res.end('Welcome to NODE ES6')
+    res.end('Hello Node ES6')
   })
 }
 
