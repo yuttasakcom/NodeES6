@@ -6,7 +6,7 @@ describe('GET /', () => {
   it('should return Welcome to NODE ES6 response', done => {
     request(app)
       .get('/')
-      .expect('Welcome to NODE ES6')
+      .expect('Hello Node ES6')
       .end(done)
   })
 })
