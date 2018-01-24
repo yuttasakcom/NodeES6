@@ -1,4 +1,5 @@
 ## NODE ES6
+
 [![Build Status](https://travis-ci.org/yuttasakcom/NodeES6.svg?branch=master)](https://travis-ci.org/yuttasakcom/NodeES6)
 [![Coveralls github branch](https://img.shields.io/coveralls/github/yuttasakcom/NodeES6/master.svg)](https://coveralls.io/github/yuttasakcom/NodeES6?branch=master)
 [![GitHub issues](https://img.shields.io/github/issues/yuttasakcom/NodeES6.svg)](https://github.com/yuttasakcom/NodeES6/issues)
@@ -7,13 +8,15 @@
 [![GitHub license](https://img.shields.io/github/license/yuttasakcom/NodeES6.svg)](https://github.com/yuttasakcom/NodeES6/blob/master/LICENSE)
 
 ## Table of Contents
-- [App](#app)
-- [Routes](#routes)
-- [Test](#test)
-- [Docker](#dokcer)
-- [License](#license)
+
+* [App](#app)
+* [Routes](#routes)
+* [Test](#test)
+* [Docker](#dokcer)
+* [License](#license)
 
 ## App
+
 ```javascript
 // Module dependencies.
 import express from 'express'
@@ -36,10 +39,10 @@ app.listen(app.get('port'), app.get('host'), () => {
 
 // Export app
 export default app
-
 ```
 
 ## Routes
+
 ```javascript
 const router = app => {
   app.use('/', (req, res) => {
@@ -48,10 +51,10 @@ const router = app => {
 }
 
 export default router
-
 ```
 
 ## Test
+
 ```javascript
 import request from 'supertest'
 
@@ -65,10 +68,10 @@ describe('GET /', () => {
       .end(done)
   })
 })
-
 ```
 
 ## Docker
+
 ```
 ----------------------------------------------
 ## hosts
@@ -134,10 +137,10 @@ services:
 networks:
   proxy:
     driver: bridge
-
 ```
 
 ## License
+
 The MIT License
 
 Copyright (c) 2017 Yuttasak Pannawat
