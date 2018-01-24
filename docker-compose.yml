@@ -9,15 +9,13 @@ services:
     networks:
       - proxy
     ports:
-      - "80:80"
+      - "8000:80"
     restart: always
 
   nodees6:
     build: .
     image: yuttasakcom/nodees6:1.0.0
     container_name: nodees6
-    environment:
-      - HOST=nodees6
     networks:
       - proxy
     restart: always

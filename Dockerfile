@@ -1,14 +1,13 @@
-FROM node:9.2.1-alpine
+FROM node:9.4.0-alpine
 
-RUN mkdir -p /install
-ADD package.json /install
-WORKDIR /install
-RUN npm install --only=production
-ENV NODE_PATH=/install/node_modules
+RUN mkdir -p /opt/app
 
-WORKDIR /worker
-COPY . .
+WORKDIR /opt
+COPY package.json package-lock.json* ./
+RUN npm install && npm cache clean --force
+ENV PATH /opt/node_modules/.bin:$PATH
 
-EXPOSE 3000
+WORKDIR /opt/app
+COPY . /opt/app
 
-CMD ["npm", "start"]
+CMD [ "npm", "start" ]
