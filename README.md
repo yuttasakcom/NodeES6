@@ -9,134 +9,17 @@
 
 ## Table of Contents
 
-* [App](#app)
-* [Routes](#routes)
-* [Test](#test)
-* [Docker](#dokcer)
+* [Setup](#setup)
 * [License](#license)
 
-## App
+## Setup
 
-```javascript
-// Module dependencies.
-import express from 'express'
-import routes from './routes'
+```bash
+# clone project
+git clone git@github.com:yuttasakcom/node-apis.git && cd node-apis
 
-// Create Express server.
-const app = express()
-
-// Express configuration.
-app.set('host', process.env.HOST || 'localhost')
-app.set('port', process.env.PORT || 3000)
-
-// Routes.
-routes(app)
-
-// Start Express server.
-app.listen(app.get('port'), app.get('host'), () => {
-  console.log(`Server running at ${app.get('host')}:${app.get('port')}`)
-})
-
-// Export app
-export default app
-```
-
-## Routes
-
-```javascript
-const router = app => {
-  app.use('/', (req, res) => {
-    res.end('Welcome to NODE ES6')
-  })
-}
-
-export default router
-```
-
-## Test
-
-```javascript
-import request from 'supertest'
-
-import app from '../server/app'
-
-describe('GET /', () => {
-  it('should return Welcome to NODE ES6 response', done => {
-    request(app)
-      .get('/')
-      .expect('Welcome to NODE ES6')
-      .end(done)
-  })
-})
-```
-
-## Docker
-
-```
-----------------------------------------------
-## hosts
-----------------------------------------------
-127.0.0.1 local.nodees6.com
-```
-
-```
-----------------------------------------------
-## start container
-----------------------------------------------
-$ docker-compose up -d --build
-```
-
-```
-----------------------------------------------
-Dockerfile
-----------------------------------------------
-FROM node:9.2.1
-
-RUN mkdir -p /install
-ADD package.json /install
-WORKDIR /install
-RUN npm install --only=production
-ENV NODE_PATH=/install/node_modules
-
-WORKDIR /worker
-COPY . .
-
-EXPOSE 3000
-
-CMD ["npm", "start"]
-```
-
-```
-----------------------------------------------
-docker-compose.yml
-----------------------------------------------
-version: '3'
-
-services:
-
-  proxy:
-    build: ./nginx
-    image: yuttasakcom/proxy:1.0
-    container_name: proxy
-    networks:
-      - proxy
-    ports:
-      - "80:80"
-    restart: always
-
-  nodees6:
-    build: .
-    image: yuttasakcom/nodees6:1.0.0
-    container_name: nodees6
-    environment:
-      - HOST=nodees6
-    networks:
-      - proxy
-    restart: always
-
-networks:
-  proxy:
-    driver: bridge
+# install packages
+npm install
 ```
 
 ## License
