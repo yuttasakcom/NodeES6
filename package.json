@@ -1,7 +1,7 @@
 {
-  "name": "node-es6",
+  "name": "node-apis",
   "version": "1.0.0",
-  "description": "NODE ES6",
+  "description": "node-apis",
   "main": "server/server.js",
   "scripts": {
     "dev:build": "webpack --watch",
@@ -16,26 +16,19 @@
   "babel": {
     "env": {
       "test": {
-        "presets": [
-          "env"
-        ]
+        "presets": ["env"]
       }
     }
   },
   "jest": {
     "testEnvironment": "node",
-    "collectCoverageFrom": [
-      "**/src/**/*.js"
-    ]
+    "collectCoverageFrom": ["**/src/**/*.js"]
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yuttasakcom/NodeES6.git"
   },
-  "keywords": [
-    "node-es6",
-    "nodees6"
-  ],
+  "keywords": ["node-apis", "node-es6"],
   "author": "Yuttasak Pannawat<yuttasakcom@gmail.com>",
   "license": "MIT",
   "bugs": {
