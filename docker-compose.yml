@@ -4,7 +4,7 @@ services:
 
   proxy:
     build: ./nginx
-    image: yuttasakcom/proxy:1.0
+    image: yuttasakcom/node-proxy:1.0
     container_name: proxy
     networks:
       - proxy
@@ -12,10 +12,10 @@ services:
       - "8000:80"
     restart: always
 
-  nodees6:
+  apis:
     build: .
-    image: yuttasakcom/nodees6:1.0.0
-    container_name: nodees6
+    image: yuttasakcom/node-apis:1.0.0
+    container_name: apis
     networks:
       - proxy
     restart: always
