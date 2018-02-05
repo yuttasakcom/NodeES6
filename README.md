@@ -20,6 +20,9 @@ git clone git@github.com:yuttasakcom/node-apis.git && cd node-apis
 
 # install packages
 npm install
+
+# dev
+npm run dev
 ```
 
 ## License
