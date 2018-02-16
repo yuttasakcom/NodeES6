@@ -1,6 +1,6 @@
 ## NODE ES6
 
-[![Build Status](https://travis-ci.org/yuttasakcom/NodeES6.svg?branch=master)](https://travis-ci.org/yuttasakcom/NodeES6)
+[![Build Status](https://travis-ci.org/yuttasakcom/NodeES6.svg?branch=master)](https://travis-ci.org/yuttasakcom/node-apis)
 [![Coveralls github branch](https://img.shields.io/coveralls/github/yuttasakcom/NodeES6/master.svg)](https://coveralls.io/github/yuttasakcom/NodeES6?branch=master)
 [![GitHub issues](https://img.shields.io/github/issues/yuttasakcom/NodeES6.svg)](https://github.com/yuttasakcom/NodeES6/issues)
 [![GitHub forks](https://img.shields.io/github/forks/yuttasakcom/NodeES6.svg)](https://github.com/yuttasakcom/NodeES6/network)
