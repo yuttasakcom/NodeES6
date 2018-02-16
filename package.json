@@ -16,19 +16,26 @@
   "babel": {
     "env": {
       "test": {
-        "presets": ["env"]
+        "presets": [
+          "env"
+        ]
       }
     }
   },
   "jest": {
     "testEnvironment": "node",
-    "collectCoverageFrom": ["**/src/**/*.js"]
+    "collectCoverageFrom": [
+      "**/src/**/*.js"
+    ]
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/yuttasakcom/NodeES6.git"
   },
-  "keywords": ["node-apis", "node-es6"],
+  "keywords": [
+    "node-apis",
+    "node-es6"
+  ],
   "author": "Yuttasak Pannawat<yuttasakcom@gmail.com>",
   "license": "MIT",
   "bugs": {
