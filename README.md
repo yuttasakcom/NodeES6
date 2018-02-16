@@ -1,11 +1,11 @@
 ## NODE ES6
 
-[![Build Status](https://travis-ci.org/yuttasakcom/NodeES6.svg?branch=master)](https://travis-ci.org/yuttasakcom/node-apis)
-[![Coveralls github branch](https://img.shields.io/coveralls/github/yuttasakcom/NodeES6/master.svg)](https://coveralls.io/github/yuttasakcom/NodeES6?branch=master)
-[![GitHub issues](https://img.shields.io/github/issues/yuttasakcom/NodeES6.svg)](https://github.com/yuttasakcom/NodeES6/issues)
-[![GitHub forks](https://img.shields.io/github/forks/yuttasakcom/NodeES6.svg)](https://github.com/yuttasakcom/NodeES6/network)
-[![GitHub stars](https://img.shields.io/github/stars/yuttasakcom/NodeES6.svg)](https://github.com/yuttasakcom/NodeES6/stargazers)
-[![GitHub license](https://img.shields.io/github/license/yuttasakcom/NodeES6.svg)](https://github.com/yuttasakcom/NodeES6/blob/master/LICENSE)
+[![Build Status](https://travis-ci.org/yuttasakcom/node-apis.svg?branch=master)](https://travis-ci.org/yuttasakcom/node-apis)
+[![Coveralls github branch](https://img.shields.io/coveralls/github/yuttasakcom/node-apis/master.svg)](https://coveralls.io/github/yuttasakcom/node-apis?branch=master)
+[![GitHub issues](https://img.shields.io/github/issues/yuttasakcom/node-apis.svg)](https://github.com/yuttasakcom/node-apis/issues)
+[![GitHub forks](https://img.shields.io/github/forks/yuttasakcom/node-apis.svg)](https://github.com/yuttasakcom/node-apis/network)
+[![GitHub stars](https://img.shields.io/github/stars/yuttasakcom/node-apis.svg)](https://github.com/yuttasakcom/node-apis/stargazers)
+[![GitHub license](https://img.shields.io/github/license/yuttasakcom/node-apis.svg)](https://github.com/yuttasakcom/node-apis/blob/master/LICENSE)
 
 ## Table of Contents
 
